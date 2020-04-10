@@ -58,7 +58,7 @@ int main() {
 	Canny(src, canny, 70, 210);
 
 	vector<cv::Vec4i>lines;
-	HoughLinesP(canny, lines, 1, CV_PI / 180, 20,3,10);
+	HoughLinesP(canny, lines, 1, CV_PI / 180, 30,3,10);
 	vector<Vec4i>::iterator it = lines.begin();
 	for (;it != lines.end();++it) {
 		Point pt1, pt2;
